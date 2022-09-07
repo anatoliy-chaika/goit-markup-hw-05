@@ -687,7 +687,7 @@ ul {
   transform: translate(-50%, -50%) scale(0.8);
 }
 
-.button {
+.button-modal {
   position: absolute;
   top: 8px;
   right: 8px;
