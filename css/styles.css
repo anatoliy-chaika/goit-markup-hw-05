@@ -13,7 +13,7 @@
   --icon-cl: #afb1b8;
   --bg-cl: rgba(47, 48, 58, 0.8);
   --modal-bg-cl: rgba(0, 0, 0, 0.2);
-  --eff-port-bg-cl:rgba(33, 150, 243, 0.9);
+  --eff-port-bg-cl: rgba(33, 150, 243, 0.9);
 }
 body {
   background-color: var(--main-background-color);
@@ -103,11 +103,10 @@ ul {
 
 .nav .link {
   position: relative;
-
 }
 
 .nav .link.current::after {
-  content: "";
+  content: '';
   display: inline-block;
   width: 100%;
   height: 4px;
@@ -132,6 +131,8 @@ ul {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -150,6 +151,7 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item .cotact-link {
@@ -298,12 +300,10 @@ ul {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 14px;
-  line-height: calc(16/14);
+  line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   color: var(--main-background-color);
-  
 }
-
 
 /* team */
 .employee {
@@ -316,7 +316,6 @@ ul {
 }
 
 .team-title-main {
- 
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -377,6 +376,9 @@ ul {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .element .link:hover,
@@ -402,14 +404,6 @@ ul {
   margin-bottom: 50px;
 }
 
-.our-clients {
-  display: block;
-  width: 170px;
-  height: 92px;
-  border: 1px solid var(--icon-cl);
-  border-radius: 4px;
-}
-
 .clients-link {
   display: flex;
   justify-content: center;
@@ -425,8 +419,14 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 170px;
+  height: 92px;
   color: var(--icon-cl);
   fill: currentColor;
+  border: 1px solid var(--icon-cl);
+  border-radius: 4px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-clients:hover,
@@ -457,6 +457,8 @@ ul {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo.link {
   display: block;
@@ -472,6 +474,8 @@ ul {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress .item:not(:last-child) {
@@ -518,6 +522,8 @@ ul {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--main-background-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-icon {
@@ -530,7 +536,6 @@ ul {
 .join-link:focus {
   background-color: var(--accent-color);
 }
-
 
 /*portfolio  */
 
@@ -555,6 +560,10 @@ ul {
   border: none;
   min-width: 73px;
   padding: 6px 22px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:hover,
@@ -578,14 +587,12 @@ ul {
 .portfolio-link {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .portfolio-link:hover,
 .portfolio-link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 1px 1px rgba(0, 0, 0, 0.12),
-  0px 4px 4px rgba(0, 0, 0, 0.06), 1px 6px 4px rgba(0, 0, 0, 0.16);
-
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 6px 4px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-title {
@@ -626,6 +633,7 @@ ul {
   height: 100%;
   background-color: var(--eff-port-bg-cl);
   transform: translatey(100%);
+
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -634,11 +642,11 @@ ul {
   transform: translateY(0);
 }
 
-.effect-text {
+.overlay-text {
   color: var(--main-background-color);
   padding: 63px 24px;
   font-size: 18px;
-  line-height: calc(28/18);
+  line-height: calc(28 / 18);
   letter-spacing: 0.03em;
 }
 
@@ -651,12 +659,13 @@ ul {
   position: fixed;
   width: 100%;
   height: 100%;
-  /* opacity: 1;
-  visibility: visible; */
+  opacity: 1;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
-  visibility: hidden;
+  visibility: visible;
   opacity: 0;
   pointer-events: none;
 }
@@ -665,16 +674,20 @@ ul {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-
   min-width: 528px;
   min-height: 581px;
   border-radius: 4px;
   background-color: var(--main-background-color);
+  transform: translate(-50%, -50%) scale(1);
 
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button{
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.button {
   position: absolute;
   top: 8px;
   right: 8px;
