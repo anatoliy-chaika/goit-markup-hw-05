@@ -313,6 +313,9 @@ ul {
 
 .team {
   background-color: var(--team-background-color);
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .team-title-main {
